@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "recipeBox_backend": {
+      "main": "src/recipeBox_backend/main.mo",
+      "type": "motoko"
+    },
+    "recipeBox_frontend": {
+      "dependencies": [
+        "recipeBox_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/recipeBox_frontend/src/index.html"
+      },
+      "source": [
+        "src/recipeBox_frontend/assets",
+        "dist/recipeBox_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
